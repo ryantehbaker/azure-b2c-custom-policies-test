@@ -20,8 +20,8 @@
     #api {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       max-width: 500px;
-      /*border: 1px solid #ccc;*/
     }
     .entry-item {
       margin: 15px 0;
@@ -33,6 +33,15 @@
 
     .create {
       margin-top: 10px;
+    }
+
+    .intro {
+      display: none;
+    }
+
+    .attributeList ul {
+      list-style-type: none;
+      padding-left: 0;
     }
   </style>
 </head>
@@ -47,7 +56,7 @@
     </div>
   </form>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script>
     console.log('This is a custom auth flow for kia.com using custom policies');

@@ -195,8 +195,9 @@
     onTabClick = function () {
         const tab = $(this);
 
+        $('.tab').removeClass('active');
+
         tab.addClass('active');
-        tab.removeClass('active');
     };
 
     $(function () {

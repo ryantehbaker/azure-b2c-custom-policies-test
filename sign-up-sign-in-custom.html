@@ -49,6 +49,7 @@
     }
 
     .tab {
+      cursor: pointer;
       padding: 5px 8px;
       font-size: 16px;
       border: 1px solid #ccc;
@@ -204,6 +205,25 @@
         $('.tabs .tab').click(onTabClick);
         // kia logo
         $('.logo img').attr('src', "data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 102.6 51.3' xml:space='preserve' role='presentation' aria-hidden='true' tabindex='-1' disabled='disabled' clickable='false'%3E%3Cg%3E%3Cg%3E%3Cpath d='M59.1,35.2c0,0.2,0.1,0.3,0.2,0.3c0.1,0,0.2,0,0.2-0.1L91,14.9c0.6-0.4,1.1-0.6,1.8-0.6h6.9 c1.1,0,1.8,0.7,1.8,1.8v13.2c0,1.6-0.4,2.5-1.8,3.4l-8.4,5c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2-0.1-0.2-0.4V22 c0-0.2-0.1-0.3-0.2-0.3s-0.2,0-0.2,0.1l-23,15c-0.6,0.4-1.2,0.5-1.8,0.5H50.4c-1.1,0-1.8-0.7-1.8-1.8v-19c0-0.1-0.1-0.3-0.2-0.3 c-0.1,0-0.2,0-0.2,0.1L33,25.5c-0.2,0.1-0.2,0.2-0.2,0.2c0,0.1,0,0.1,0.1,0.2l10.8,10.8c0.1,0.1,0.2,0.3,0.2,0.4 c0,0.1-0.2,0.2-0.3,0.2h-9.8c-0.8,0-1.4-0.1-1.8-0.5l-6.6-6.6c-0.1-0.1-0.1-0.1-0.2-0.1s-0.1,0-0.2,0.1l-11,6.6 c-0.7,0.4-1.1,0.5-1.8,0.5H2.3c-1.1,0-1.8-0.7-1.8-1.8v-13c0-1.6,0.4-2.5,1.8-3.4l8.4-5.1c0.1-0.1,0.2-0.1,0.2-0.1 c0.1,0,0.2,0.1,0.2,0.4v17.3c0,0.2,0.1,0.3,0.2,0.3c0.1,0,0.2,0,0.3-0.1l28.5-17.2c0.7-0.4,1.1-0.5,1.9-0.5h15.4 c1.1,0,1.8,0.7,1.8,1.8v19.3H59.1z' class='st0'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+        $('.tab-sign-in').click(function() {
+            const tab = $(this);
+
+            if (!tab.hasClass('active')) {
+                window.location.href = 'https://kiausab2cd.b2clogin.com/kiausab2cd.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1A_DEMO_SIGNUP_SIGNIN_SPLITEMAILVERIFICATIONANDSIGNUP&client_id=4c8cf127-3065-48e2-8298-6ab69e9ea001&nonce=defaultNonce&redirect_uri=http%3A%2F%2Flocalhost%3A4502%2Fb2credirect&scope=openid&response_type=id_token&prompt=login';
+            }
+        })
+
+        const signUpLink = $('#createAccount').attr('href');
+
+        $('.tab-sign-up').click(function(){
+            const tab = $(this);
+
+            if (!tab.hasClass('active')) {
+                window.location.href = signUpLink;
+            }
+        })
+
     });
 </script>
 </body>

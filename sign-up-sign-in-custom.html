@@ -6,7 +6,9 @@
     body {
       margin: 0;
       padding: 0;
+      height: 100vh;
     }
+
     .logo {
       display: flex;
       justify-content: center;
@@ -29,9 +31,27 @@
       display: none;
     }
 
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      align-items: center;
+    }
+
     .container {
-      font-family: arial;
-      max-width: 767px;
+      font-family: Arial;
+      justify-self: center;
+      height: 100%;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    @media only screen and (min-width : 501px) {
+      .container {
+        height: auto;
+        max-width: 500px;
+      }
     }
 
     .back-bar {
@@ -145,6 +165,7 @@
     .buttons {
       display: flex;
       justify-content: flex-end;
+      margin-bottom: 30px;
     }
 
     button {
@@ -181,6 +202,12 @@
       margin-right: 20px;
     }
 
+    button:nth-child(1) {
+      background: white;
+      color: black;
+      border: 1px solid black;
+    }
+
     #attributeVerification ul {
       list-style-type: none;
       padding-left: 0;
@@ -202,24 +229,26 @@
   </style>
 </head>
 <body>
-<div class="container">
-  <div class="back-bar">
-    < Back
-  </div>
-  <div class="user-flow">
-    <div class="tabs">
-      <div class="tab tab-sign-up">
-        Sign Up
-      </div>
-      <div class="tab tab-sign-in">
-        Sign In
-      </div>
+<div class="wrapper">
+  <div class="container">
+    <div class="back-bar">
+      < Back
     </div>
-    <div class="content">
-      <div class="logo">
-        <img alt="Kia Logo">
+    <div class="user-flow">
+      <div class="tabs">
+        <div class="tab tab-sign-up">
+          Sign Up
+        </div>
+        <div class="tab tab-sign-in">
+          Sign In
+        </div>
       </div>
-      <div id="api"></div>
+      <div class="content">
+        <div class="logo">
+          <img alt="Kia Logo">
+        </div>
+        <div id="api"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -245,7 +274,7 @@
 
             const signUpLink = $('#createAccount').attr('href');
 
-            $('.tab-sign-up').click(function(){
+            $('.tab-sign-up').click(function () {
                 console.log('sign up');
                 const tab = $(this);
 
@@ -256,7 +285,7 @@
         } else {
             $('.tab-sign-up').addClass('active');
 
-            $('.tab-sign-in').click(function() {
+            $('.tab-sign-in').click(function () {
                 console.log('sign in');
                 const tab = $(this);
 

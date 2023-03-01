@@ -145,6 +145,23 @@
       font-family: designk-bold, Helvetica Neue, Helvetica, Arial, sans-serif;
     }
 
+    /*
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+     */
+
     .entry-item input, .attrEntry input, #codeVerification input {
       font-size: 16px;
       line-height: 24px;
@@ -229,7 +246,7 @@
       margin-top: 10px;
     }
 
-    button:nth-child(n+2) {
+    button:not(button:first-child) {
       background: white;
       color: black;
       border: 1px solid black;
